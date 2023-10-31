@@ -187,7 +187,8 @@ def write_in_csv(filename, data):
             title, difficulty, link = row
             sr_num += 1
             q_title = title.split(". ")[1]
-            hyperlink = f'<a href="{link}">Link</a>'
+            # hyperlink = f'<a href="{link}">Link</a>'
+            hyperlink = link
             csvWriter.writerow([sr_num, q_title, difficulty, hyperlink])
 
 

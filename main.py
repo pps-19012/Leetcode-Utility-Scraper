@@ -20,9 +20,9 @@ def main():
     if not os.path.exists(ac_question_solution_folder_name):
         os.makedirs(ac_question_solution_folder_name)
 
-    util.generate_ac_questions_solutions(
-        ac_question_solution_folder_name, PROGRAMMING_LANGUAGES
-    )
+    # util.generate_ac_questions_solutions(
+    #     ac_question_solution_folder_name, PROGRAMMING_LANGUAGES
+    # )
 
 
 if __name__ == "__main__":
