@@ -1,0 +1,12 @@
+class Solution:
+    def reverse(self, x: int) -> int:
+        min_val = -1 * 2 ** 31
+        max_val = 2 ** 31 - 1
+        ans = 0
+        while x:
+            last_digit = int(math.fmod(x, 10))
+            x = int(x/10)
+            ans = ans * 10 + last_digit
+            if ans < min_val or ans > max_val:
+                return 0
+        return ans
