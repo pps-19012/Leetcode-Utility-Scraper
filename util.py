@@ -15,7 +15,7 @@ load_dotenv()
 USERNAME = os.getenv("LEETCODE_USERNAME")
 PASSWORD = os.getenv("LEETCODE_PASSWORD")
 QUESTIONS_PAGE_WAIT_SECONDS = 5
-LOGIN_PAGE_WAIT_SECONDS = 5
+LOGIN_PAGE_WAIT_SECONDS = 10
 PROFILE_PAGE_WAIT_SECONDS = 10
 LONG_WAIT = 500
 
@@ -44,7 +44,7 @@ def get_last_page(driver, username):
 
     questions_solved = driver.find_element(
         By.XPATH,
-        "/html/body/div[1]/div[1]/div[2]/div/div[2]/div[3]/div[1]/div/div[2]/div[1]/div/div/div/div[1]",
+        "/html/body/div[1]/div[1]/div[4]/div/div[2]/div[3]/div[1]/div/div/div[1]/div/div[2]/div[1]/div[1]/span[1]",
     )
 
     total_questions = int(questions_solved.text)
@@ -54,7 +54,7 @@ def get_last_page(driver, username):
 
 
 def populate_question_data(driver, page, data):
-    page_url = f"https://leetcode.com/problemset/all/?page={page}&status=AC"
+    page_url = f"https://leetcode.com/problemset/?status=AC&page={page}"
     driver.get(page_url)
     time.sleep(QUESTIONS_PAGE_WAIT_SECONDS)
 
