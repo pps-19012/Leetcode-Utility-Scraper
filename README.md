@@ -13,6 +13,7 @@ PROGRAMMING_LANGUAGES = mention_all_the_programming_languages_you_want_your_subm
 ```
 
 - The variable `PROGRAMMING_LANGUAGES` is the list of programming languages in which you want your solutions to be downloaded. For multiple languages you can write as `PROGRAMMING_LANGUAGES = Python3, C++, Java`. Note that you must have made submission in the above required programming language.
+- run `main.py`
 
 Already implemented:
 
